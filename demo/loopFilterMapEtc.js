@@ -96,4 +96,12 @@ const ans=coding.filter((val)=>(val.length > 3))
 
 const arr1=[1,2,3,4,5,6,7]
 const nums=arr1.map((num)=>num+10)
-console.log(nums);
+// console.log(nums);
+
+//chaining
+
+const newnums=arr1.map((num)=>num*10)
+                  .map((num)=>num+1)
+                  .filter((num)=>num>40)
+
+console.log(newnums);
