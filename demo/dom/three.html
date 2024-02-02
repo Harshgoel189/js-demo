@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: black;color: white;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+
+    function addListItem(item){
+        const li=document.querySelector(".language");
+        const newli=document.createElement('li');
+        newli.textContent=item;
+        li.appendChild(newli);
+    }
+    function addListItemInOptimisedWay(item){
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(item))
+        document.querySelector('.language').appendChild(li)
+    }
+    addListItem('cpp')
+    addListItem('Java')
+    addListItem('Ruby')
+
+    addListItemInOptimisedWay('Golanag')
+
+    //edit elements
+
+    const secondLang=document.querySelector('li:nth-child(2)');
+    const newLang=document.createElement('li');
+    newLang.textContent='C++';
+    secondLang.replaceWith(newLang)
+
+    //Remove elements
+
+    const fourthLang=document.querySelector('li:nth-child(4)');
+    fourthLang.remove()
+    
+    
+</script>
+</html>
